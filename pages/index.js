@@ -5,8 +5,8 @@ import Layout from "@/components/Layout";
 
 export default function Index() {
   return (
-    <Layout >
-      Index
-    </Layout>
+    <Layout>
+      <h1 className="text-4xl font-bold text-blue-500">Index</h1>
+    </Layout >
   );
 }
