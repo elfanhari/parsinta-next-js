@@ -12,6 +12,9 @@ export default function Navbar() {
             </Link>
           </div>
           <div className="flex items-center">
+            <Link href="/posts" className="text-blue-200 hover:text-white py-5 px-3">
+              Posts
+            </Link>
             <Link href="/about" className="text-blue-200 hover:text-white py-5 px-3">
               About
             </Link>
