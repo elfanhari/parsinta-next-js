@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   env: {
-    appName: "Learn Next.js with Parsinta",
+    appName: "Learn Next.js",
   },
   async rewrites() {
     return [

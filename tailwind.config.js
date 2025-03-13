@@ -1,12 +1,17 @@
-/** @type {import('tailwindcss').Config} */
+// /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./app/**/*.{js,ts,jsx,tsx}",
-    "./pages/**/*.{js,ts,jsx,tsx}",
+  purge: [
+    // "./app/**/*.{js,ts,jsx,tsx}", // Jika menggunakan App Router
+    "./pages/**/*.{js,ts,jsx,tsx}", // Jika menggunakan Pages Router
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      // container: {
+      //   center: true, // Memastikan container berada di tengah
+      //   padding: "1rem", // Memberikan padding default
+      // },
+    },
   },
   plugins: [],
 };

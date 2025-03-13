@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Navbar from "./Navbar";
 
 export default function Layout(props) {
   return (
@@ -7,7 +8,10 @@ export default function Layout(props) {
         <title>{props.title ? props.title + ' - VANZDEV' : 'VANZDEV'}</title>
         <link rel="icon" href="https://vanzdev.com/img/new-logo/CIRCLE%20LOGO%20-%20White%20Blue.png" />
       </Head>
-      {props.children}
+      <Navbar />
+      <div className="mt-8">
+        {props.children}
+      </div>
     </div>
   );
 }
