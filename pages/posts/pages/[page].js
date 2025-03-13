@@ -1,6 +1,6 @@
-import BlogPost from "@/components/BlogPost";
-import Layout from "@/components/Layout";
+import Layout from "../../../components/Layout";
 import { useRouter } from "next/router";
+import BlogPost from "@/components/BlogPost";
 
 export default function Index({ posts }) {
   const router = useRouter();
@@ -12,6 +12,7 @@ export default function Index({ posts }) {
         <div className="pt-2">
           <div className="flex">
             <div className="w-1/2">
+
               <BlogPost pagination={posts.meta.links} data={posts.data} />
 
               <div className="my-8">
@@ -29,8 +30,8 @@ export default function Index({ posts }) {
   );
 }
 
-export const getServerSideProps = async ({ query: { page = 1 } }) => {
-  const response = await fetch(process.env.apiPosts + `?page=${page}`);
+export const getServerSideProps = async ({ params }) => {
+  const response = await fetch(process.env.apiPosts + `?page=${params.page}`);
   const posts = await response.json();
 
   return {
